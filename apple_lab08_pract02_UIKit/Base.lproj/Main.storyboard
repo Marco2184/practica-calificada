@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7ge-GZ-95a">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TAB-001">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
@@ -8,99 +8,336 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Teacher Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="TeacherController" customModule="apple_lab08_pract02_UIKit" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="utG-wb-OH9"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1902" y="5"/>
-        </scene>
+
         <!--Tab Bar Controller-->
-        <scene sceneID="cDk-hr-N4G">
+        <scene sceneID="SC-TAB">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="7ge-GZ-95a" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cge-dF-VMy">
+                <tabBarController id="TAB-001" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="TAB-BAR">
+                        <rect key="frame" x="0.0" y="769" width="393" height="83"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </tabBar>
                     <connections>
-                        <segue destination="4rU-aH-ejV" kind="relationship" relationship="viewControllers" id="S1k-zp-nsy"/>
-                        <segue destination="zwW-NK-4Bs" kind="relationship" relationship="viewControllers" id="U3Q-0f-oTe"/>
+                        <segue destination="NAV-T" kind="relationship" relationship="viewControllers" id="REL-T"/>
+                        <segue destination="NAV-C" kind="relationship" relationship="viewControllers" id="REL-C"/>
+                        <segue destination="NAV-R" kind="relationship" relationship="viewControllers" id="REL-R"/>
                     </connections>
                 </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GLL-UE-hac" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FR-TAB" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-960" y="334"/>
+            <point key="canvasLocation" x="-900" y="300"/>
         </scene>
-        <!--Item-->
-        <scene sceneID="pqf-6J-IjZ">
+
+        <!--Lista-->
+        <scene sceneID="SC-NAV-T">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4rU-aH-ejV" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="BRa-66-j2V"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="X3i-ar-M8H">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
+                <navigationController id="NAV-T" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Lista" image="person.3" catalog="system" id="ITEM-T"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NB-T"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="HPF-nC-ogi"/>
+                        <segue destination="VC-T" kind="relationship" relationship="rootViewController" id="ROOT-T"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ytT-0W-Cgv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FR-NT" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="863.35877862595419" y="4.9295774647887329"/>
+            <point key="canvasLocation" x="-100" y="-100"/>
         </scene>
-        <!--Calculator Controller-->
-        <scene sceneID="bWG-A4-Qky">
+
+        <!--Teacher Controller-->
+        <scene sceneID="SC-T">
             <objects>
-                <viewController id="T2M-sa-Mq8" customClass="CalculatorController" customModule="apple_lab08_pract02_UIKit" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="6SF-U6-OZL">
+                <viewController id="VC-T" customClass="TeacherController" customModule="apple_lab08_pract02_UIKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VIEW-T">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="eBx-ru-gK3"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="SEARCH-T">
+                                <rect key="frame" x="16" y="111" width="361" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <string key="placeholder">Buscar docente</string>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" separatorStyle="singleLine" rowHeight="62" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TABLE-T">
+                                <rect key="frame" x="16" y="175" width="361" height="594"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TeacherCell" rowHeight="62" id="CELL-T">
+                                        <rect key="frame" x="0.0" y="50" width="361" height="62"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CELL-T" id="CONTENT-T">
+                                            <rect key="frame" x="0.0" y="0.0" width="361" height="62"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="SAFE-T"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="SEARCH-T" firstAttribute="top" secondItem="SAFE-T" secondAttribute="top" constant="8" id="T-C1"/>
+                            <constraint firstItem="SEARCH-T" firstAttribute="leading" secondItem="SAFE-T" secondAttribute="leading" constant="16" id="T-C2"/>
+                            <constraint firstItem="SAFE-T" firstAttribute="trailing" secondItem="SEARCH-T" secondAttribute="trailing" constant="16" id="T-C3"/>
+                            <constraint firstItem="TABLE-T" firstAttribute="top" secondItem="SEARCH-T" secondAttribute="bottom" constant="8" id="T-C4"/>
+                            <constraint firstItem="TABLE-T" firstAttribute="leading" secondItem="SAFE-T" secondAttribute="leading" constant="16" id="T-C5"/>
+                            <constraint firstItem="SAFE-T" firstAttribute="trailing" secondItem="TABLE-T" secondAttribute="trailing" constant="16" id="T-C6"/>
+                            <constraint firstItem="SAFE-T" firstAttribute="bottom" secondItem="TABLE-T" secondAttribute="bottom" id="T-C7"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="reS-7n-wrt"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="C2s-2Y-TIz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1902" y="717"/>
-        </scene>
-        <!--Item-->
-        <scene sceneID="Rn2-z6-mBI">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zwW-NK-4Bs" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Ghe-gB-Cof"/>
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="5Yh-pj-BTZ"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UC0-Te-i4v">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
+                    <navigationItem key="navigationItem" title="Docentes" id="NI-T"/>
                     <connections>
-                        <segue destination="T2M-sa-Mq8" kind="relationship" relationship="rootViewController" id="bei-dR-Zjk"/>
+                        <outlet property="buscador" destination="SEARCH-T" id="OUT-TS"/>
+                        <outlet property="tablaDocentes" destination="TABLE-T" id="OUT-TT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FR-T" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="800" y="-100"/>
+        </scene>
+
+        <!--Calculadora Nav-->
+        <scene sceneID="SC-NAV-C">
+            <objects>
+                <navigationController id="NAV-C" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Calculadora" image="plus.forwardslash.minus" catalog="system" id="ITEM-C"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NB-C"/>
+                    <connections>
+                        <segue destination="VC-C" kind="relationship" relationship="rootViewController" id="ROOT-C"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HfB-fo-pjl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FR-NC" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="861.83206106870227" y="717.6056338028169"/>
+            <point key="canvasLocation" x="-100" y="600"/>
         </scene>
+
+        <!--Calculator Controller-->
+        <scene sceneID="SC-C">
+            <objects>
+                <viewController id="VC-C" customClass="CalculatorController" customModule="apple_lab08_pract02_UIKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VIEW-C">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CARD-C">
+                                <rect key="frame" x="24" y="125" width="345" height="410"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Operación matemática" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="TITLE-C">
+                                        <rect key="frame" x="16" y="20" width="313" height="29"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" borderStyle="roundedRect" placeholder="Primer número" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="TF1-C">
+                                        <rect key="frame" x="20" y="80" width="305" height="50"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" borderStyle="roundedRect" placeholder="Segundo número" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="TF2-C">
+                                        <rect key="frame" x="20" y="150" width="305" height="50"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Operación" translatesAutoresizingMaskIntoConstraints="NO" id="LBL-OP">
+                                        <rect key="frame" x="20" y="220" width="305" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" buttonType="system" translatesAutoresizingMaskIntoConstraints="NO" id="BTN-OP">
+                                        <rect key="frame" x="20" y="242" width="305" height="50"/>
+                                        <state key="normal" title="Suma (+)"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" buttonType="system" translatesAutoresizingMaskIntoConstraints="NO" id="BTN-CALC">
+                                        <rect key="frame" x="20" y="320" width="305" height="54"/>
+                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <state key="normal" title="Calcular">
+                                            <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="calcular:" destination="VC-C" eventType="touchUpInside" id="ACT-CALC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="TITLE-C" firstAttribute="top" secondItem="CARD-C" secondAttribute="top" constant="20" id="CC1"/>
+                                    <constraint firstItem="TITLE-C" firstAttribute="leading" secondItem="CARD-C" secondAttribute="leading" constant="16" id="CC2"/>
+                                    <constraint firstAttribute="trailing" secondItem="TITLE-C" secondAttribute="trailing" constant="16" id="CC3"/>
+                                    <constraint firstItem="TF1-C" firstAttribute="top" secondItem="TITLE-C" secondAttribute="bottom" constant="30" id="CC4"/>
+                                    <constraint firstItem="TF1-C" firstAttribute="leading" secondItem="CARD-C" secondAttribute="leading" constant="20" id="CC5"/>
+                                    <constraint firstAttribute="trailing" secondItem="TF1-C" secondAttribute="trailing" constant="20" id="CC6"/>
+                                    <constraint firstItem="TF1-C" firstAttribute="height" constant="50" id="CC7"/>
+                                    <constraint firstItem="TF2-C" firstAttribute="top" secondItem="TF1-C" secondAttribute="bottom" constant="20" id="CC8"/>
+                                    <constraint firstItem="TF2-C" firstAttribute="leading" secondItem="CARD-C" secondAttribute="leading" constant="20" id="CC9"/>
+                                    <constraint firstAttribute="trailing" secondItem="TF2-C" secondAttribute="trailing" constant="20" id="CC10"/>
+                                    <constraint firstItem="TF2-C" firstAttribute="height" constant="50" id="CC11"/>
+                                    <constraint firstItem="LBL-OP" firstAttribute="top" secondItem="TF2-C" secondAttribute="bottom" constant="18" id="CC12"/>
+                                    <constraint firstItem="LBL-OP" firstAttribute="leading" secondItem="CARD-C" secondAttribute="leading" constant="20" id="CC13"/>
+                                    <constraint firstItem="BTN-OP" firstAttribute="top" secondItem="LBL-OP" secondAttribute="bottom" constant="2" id="CC14"/>
+                                    <constraint firstItem="BTN-OP" firstAttribute="leading" secondItem="CARD-C" secondAttribute="leading" constant="20" id="CC15"/>
+                                    <constraint firstAttribute="trailing" secondItem="BTN-OP" secondAttribute="trailing" constant="20" id="CC16"/>
+                                    <constraint firstItem="BTN-OP" firstAttribute="height" constant="50" id="CC17"/>
+                                    <constraint firstItem="BTN-CALC" firstAttribute="top" secondItem="BTN-OP" secondAttribute="bottom" constant="28" id="CC18"/>
+                                    <constraint firstItem="BTN-CALC" firstAttribute="leading" secondItem="CARD-C" secondAttribute="leading" constant="20" id="CC19"/>
+                                    <constraint firstAttribute="trailing" secondItem="BTN-CALC" secondAttribute="trailing" constant="20" id="CC20"/>
+                                    <constraint firstItem="BTN-CALC" firstAttribute="height" constant="54" id="CC21"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="SAFE-C"/>
+                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="CARD-C" firstAttribute="top" secondItem="SAFE-C" secondAttribute="top" constant="22" id="C1"/>
+                            <constraint firstItem="CARD-C" firstAttribute="leading" secondItem="SAFE-C" secondAttribute="leading" constant="24" id="C2"/>
+                            <constraint firstItem="SAFE-C" firstAttribute="trailing" secondItem="CARD-C" secondAttribute="trailing" constant="24" id="C3"/>
+                            <constraint firstItem="CARD-C" firstAttribute="height" constant="410" id="C4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Calculadora" id="NI-C"/>
+                    <connections>
+                        <outlet property="primerNumeroTextField" destination="TF1-C" id="OUT-C1"/>
+                        <outlet property="segundoNumeroTextField" destination="TF2-C" id="OUT-C2"/>
+                        <outlet property="operacionButton" destination="BTN-OP" id="OUT-C3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FR-C" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="800" y="600"/>
+        </scene>
+
+        <!--Resultados Nav-->
+        <scene sceneID="SC-NAV-R">
+            <objects>
+                <navigationController id="NAV-R" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Resultados" image="list.bullet.rectangle" catalog="system" id="ITEM-R"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NB-R"/>
+                    <connections>
+                        <segue destination="VC-R" kind="relationship" relationship="rootViewController" id="ROOT-R"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FR-NR" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-100" y="1300"/>
+        </scene>
+
+        <!--Result Controller-->
+        <scene sceneID="SC-R">
+            <objects>
+                <viewController id="VC-R" customClass="ResultController" customModule="apple_lab08_pract02_UIKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VIEW-R">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CARD-R">
+                                <rect key="frame" x="24" y="125" width="345" height="430"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Resultado de la operación" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="TITLE-R">
+                                        <rect key="frame" x="16" y="20" width="313" height="29"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" text="Operación:" translatesAutoresizingMaskIntoConstraints="NO" id="RL1"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" text="-" translatesAutoresizingMaskIntoConstraints="NO" id="RV1"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" text="Primer número:" translatesAutoresizingMaskIntoConstraints="NO" id="RL2"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" text="-" translatesAutoresizingMaskIntoConstraints="NO" id="RV2"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" text="Segundo número:" translatesAutoresizingMaskIntoConstraints="NO" id="RL3"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" text="-" translatesAutoresizingMaskIntoConstraints="NO" id="RV3"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" text="Resultado:" translatesAutoresizingMaskIntoConstraints="NO" id="RL4">
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" text="0" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="RV4">
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="42"/>
+                                        <color key="textColor" systemColor="systemBlueColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" buttonType="system" translatesAutoresizingMaskIntoConstraints="NO" id="BTN-SHARE">
+                                        <state key="normal" title="Compartir"/>
+                                        <connections>
+                                            <action selector="compartir:" destination="VC-R" eventType="touchUpInside" id="ACT-SHARE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" buttonType="system" translatesAutoresizingMaskIntoConstraints="NO" id="BTN-NEW">
+                                        <state key="normal" title="Nueva operación"/>
+                                        <connections>
+                                            <action selector="nuevaOperacion:" destination="VC-R" eventType="touchUpInside" id="ACT-NEW"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="TITLE-R" firstAttribute="top" secondItem="CARD-R" secondAttribute="top" constant="20" id="RC1"/>
+                                    <constraint firstItem="TITLE-R" firstAttribute="leading" secondItem="CARD-R" secondAttribute="leading" constant="16" id="RC2"/>
+                                    <constraint firstAttribute="trailing" secondItem="TITLE-R" secondAttribute="trailing" constant="16" id="RC3"/>
+
+                                    <constraint firstItem="RL1" firstAttribute="top" secondItem="TITLE-R" secondAttribute="bottom" constant="28" id="RC4"/>
+                                    <constraint firstItem="RL1" firstAttribute="leading" secondItem="CARD-R" secondAttribute="leading" constant="20" id="RC5"/>
+                                    <constraint firstItem="RV1" firstAttribute="centerY" secondItem="RL1" secondAttribute="centerY" id="RC6"/>
+                                    <constraint firstItem="RV1" firstAttribute="leading" secondItem="CARD-R" secondAttribute="leading" constant="170" id="RC7"/>
+
+                                    <constraint firstItem="RL2" firstAttribute="top" secondItem="RL1" secondAttribute="bottom" constant="22" id="RC8"/>
+                                    <constraint firstItem="RL2" firstAttribute="leading" secondItem="CARD-R" secondAttribute="leading" constant="20" id="RC9"/>
+                                    <constraint firstItem="RV2" firstAttribute="centerY" secondItem="RL2" secondAttribute="centerY" id="RC10"/>
+                                    <constraint firstItem="RV2" firstAttribute="leading" secondItem="CARD-R" secondAttribute="leading" constant="170" id="RC11"/>
+
+                                    <constraint firstItem="RL3" firstAttribute="top" secondItem="RL2" secondAttribute="bottom" constant="22" id="RC12"/>
+                                    <constraint firstItem="RL3" firstAttribute="leading" secondItem="CARD-R" secondAttribute="leading" constant="20" id="RC13"/>
+                                    <constraint firstItem="RV3" firstAttribute="centerY" secondItem="RL3" secondAttribute="centerY" id="RC14"/>
+                                    <constraint firstItem="RV3" firstAttribute="leading" secondItem="CARD-R" secondAttribute="leading" constant="170" id="RC15"/>
+
+                                    <constraint firstItem="RL4" firstAttribute="top" secondItem="RL3" secondAttribute="bottom" constant="34" id="RC16"/>
+                                    <constraint firstItem="RL4" firstAttribute="leading" secondItem="CARD-R" secondAttribute="leading" constant="20" id="RC17"/>
+
+                                    <constraint firstItem="RV4" firstAttribute="top" secondItem="RL4" secondAttribute="bottom" constant="16" id="RC18"/>
+                                    <constraint firstItem="RV4" firstAttribute="leading" secondItem="CARD-R" secondAttribute="leading" constant="20" id="RC19"/>
+                                    <constraint firstAttribute="trailing" secondItem="RV4" secondAttribute="trailing" constant="20" id="RC20"/>
+                                    <constraint firstItem="RV4" firstAttribute="height" constant="70" id="RC21"/>
+
+                                    <constraint firstItem="BTN-SHARE" firstAttribute="top" secondItem="RV4" secondAttribute="bottom" constant="22" id="RC22"/>
+                                    <constraint firstItem="BTN-SHARE" firstAttribute="leading" secondItem="CARD-R" secondAttribute="leading" constant="20" id="RC23"/>
+                                    <constraint firstItem="BTN-SHARE" firstAttribute="width" constant="140" id="RC24"/>
+                                    <constraint firstItem="BTN-SHARE" firstAttribute="height" constant="44" id="RC25"/>
+
+                                    <constraint firstItem="BTN-NEW" firstAttribute="top" secondItem="RV4" secondAttribute="bottom" constant="22" id="RC26"/>
+                                    <constraint firstAttribute="trailing" secondItem="BTN-NEW" secondAttribute="trailing" constant="20" id="RC27"/>
+                                    <constraint firstItem="BTN-NEW" firstAttribute="width" constant="150" id="RC28"/>
+                                    <constraint firstItem="BTN-NEW" firstAttribute="height" constant="44" id="RC29"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="SAFE-R"/>
+                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="CARD-R" firstAttribute="top" secondItem="SAFE-R" secondAttribute="top" constant="22" id="R1"/>
+                            <constraint firstItem="CARD-R" firstAttribute="leading" secondItem="SAFE-R" secondAttribute="leading" constant="24" id="R2"/>
+                            <constraint firstItem="SAFE-R" firstAttribute="trailing" secondItem="CARD-R" secondAttribute="trailing" constant="24" id="R3"/>
+                            <constraint firstItem="CARD-R" firstAttribute="height" constant="430" id="R4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Resultado" id="NI-R"/>
+                    <connections>
+                        <outlet property="operacionLabel" destination="RV1" id="OUT-R1"/>
+                        <outlet property="primerNumeroLabel" destination="RV2" id="OUT-R2"/>
+                        <outlet property="segundoNumeroLabel" destination="RV3" id="OUT-R3"/>
+                        <outlet property="resultadoLabel" destination="RV4" id="OUT-R4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FR-R" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="800" y="1300"/>
+        </scene>
+
     </scenes>
     <resources>
+        <image name="list.bullet.rectangle" catalog="system" width="128" height="93"/>
+        <image name="person.3" catalog="system" width="128" height="71"/>
+        <image name="plus.forwardslash.minus" catalog="system" width="128" height="105"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.6" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
